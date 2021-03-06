@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>OpenWeatherMapAPI.Example</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GeoTimeZone" Version="4.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="TimeZoneConverter" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OpenWeatherMapAPI">
+      <HintPath>..\OpenWeatherMapAPI\bin\Debug\netstandard2.0\OpenWeatherMapAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

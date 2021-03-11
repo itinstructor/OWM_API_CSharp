@@ -1,4 +1,4 @@
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System.Globalization;
 
 namespace OpenWeatherMapAPI
@@ -6,9 +6,12 @@ namespace OpenWeatherMapAPI
 	public class Weather
 	{
 		public int ID { get; }
+
 		public string Main { get; }
+
 		public string Description { get; }
 		public string DescriptionTitleCase { get; }
+
 		public string Icon { get; }
 
 		public Weather(JToken weatherData)

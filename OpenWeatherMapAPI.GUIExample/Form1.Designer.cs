@@ -106,7 +106,7 @@ namespace OpenWeatherMap
             this.btnGetWeather.TabIndex = 23;
             this.btnGetWeather.Text = "Get Weather";
             this.btnGetWeather.UseVisualStyleBackColor = true;
-            this.btnGetWeather.Click += new System.EventHandler(this.btnGetWeather_Click);
+            this.btnGetWeather.Click += new System.EventHandler(this.BtnGetWeather_Click);
             // 
             // groupBox2
             // 

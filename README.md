@@ -67,23 +67,22 @@
 ### Installing
 There are two methods of obtaining the OpenWeatherMapAPI.dll.
 - Easy Way
-1. Download the OpenWeatherMap.dll file.
-2. Copy it to your Visual C# project.
-3. In your project that's using this code, reference the built DLL from the previous step:
-   - Project menu -> Add Reference -> Search for the created DLL file.
-   - The path is something like: `/OpenWeatherMap-API-CSharp/OpenWeatherAPI.dll`
+1. Download the OpenWeatherMap.dll file. Copy it to your Visual C# project.
+2. In your project that's using this code, reference the built DLL from the previous step:
+   - Project dropdown -> Add Reference -> Search for the created DLL file.
+   - Generally, the path is something like: `/OpenWeatherMap-API-CSharp/OpenWeatherAPI.dll`
 - Hard Way - Build Your Own OpenWeatherMap.dll
-1. Clone this code with GitHub desktop
+1. Clone this code with the GitHub desktop
 2. Open the code in Visual Studio
 3. Build the project
 4. In the project that's using this code, reference or copy the built DLL to your project from the previous step:
    - Project menu -> Add Reference -> Search for the created DLL(s) file.
-   - The path is something like: `/OpenWeatherMap-API-CSharp/bin/Debug/OpenWeatherMapAPI.dll`
+   - Generally, the path is something like: `/OpenWeatherMap-API-CSharp/bin/Debug/OpenWeatherMapAPI.dll`
 
 ### Example Console Usage
-```CSharp
+```csharp
 var client = new OpenWeatherMapAPI.API("Your Personal OpenWeatherMap API Key");
-var results = client.Query(city, "q");
+var results = client.Query(city,"q");
 Console.WriteLine($"\n\nThe temperature in {city} is {results.Main.Temperature.FahrenheitCurrent}°F. \nThere is a {results.Wind.SpeedMilesPerHour.ToString("n2")} mph wind from the {results.Wind.DirectionStringShort}");
 ```
 
@@ -99,7 +98,6 @@ This repository contains two example projects.
 
 ### Purpose
 I am an Information Technology Instructor at Western Nebraska Community College. I teach Information Technology Technical Support, CyberSecurity and Computer Science.
-
 This library was forked and modified for a Visual C# introductory programming class as a tutorial. Students are given the opportunity to learn how to consume a public API without the underlying complexity of parsing json or xml. It reinforces OOP concepts of objects and properties, while being a fun and interesting project.
 
 ### Changes

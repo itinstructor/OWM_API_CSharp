@@ -1,4 +1,4 @@
-/**
+﻿/**
 * Project:       OpenWeatherMapAPI - C# Class Library
 * Programmer:    itinstructor
 * Creation Date: 01/10/2021
@@ -22,7 +22,7 @@ namespace OpenWeatherMapAPI
         public string Base { get; }
         public Main Main { get; }
         public double Visibility { get; }
-        public double VisibilityKM { get; }
+        public double VisibilityKm { get; }
         public double VisibilityMiles { get; }
         public Wind Wind { get; }
         public Rain Rain { get; }
@@ -64,7 +64,7 @@ namespace OpenWeatherMapAPI
                 if (jsonData.SelectToken("visibility") != null)
                 {
                     Visibility = double.Parse(jsonData.SelectToken("visibility").ToString(), CultureInfo.InvariantCulture);
-                    VisibilityKM = Visibility * .001;
+                    VisibilityKm = Visibility * .001;
                     VisibilityMiles = Visibility * 0.000621371;
                 }
                 Wind = new Wind(jsonData.SelectToken("wind"));

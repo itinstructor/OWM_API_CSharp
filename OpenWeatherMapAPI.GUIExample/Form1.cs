@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace OpenWeatherMap
@@ -11,9 +11,10 @@ namespace OpenWeatherMap
         }
 
         // Query code string array to pass to API
-        // q: Use cityname or cityname, country code or
-        // cityname, statecode, countrycode
-        // q also returns unique city ID
+        // q: Use cityname or
+        //    cityname, country code or
+        //    cityname, statecode, countrycode
+        //    q also returns unique city ID
         // zip: Use zipcode (US Zip Codes by default) or zipcode, countrycode
         // id: OpenWeatherMap unique City ID
         // The array is parallel to the combobox
@@ -23,9 +24,9 @@ namespace OpenWeatherMap
         private const string iconUrl = "http://openweathermap.org/img/wn/";
 
         // OpenWeatherMap API key object
-        private const string apiKey = "Your API Key";
+        private const string apiKey = "Your API Code Here";
 
-        private void btnGetWeather_Click(object sender, EventArgs e)
+        private void BtnGetWeather_Click(object sender, EventArgs e)
         {
             try
             {
@@ -42,10 +43,10 @@ namespace OpenWeatherMap
                 var results = client.Query(location, queryType);
 
                 // Fahrenheit temperature
-                lblTemperature.Text = results.Main.Temperature.FahrenheitCurrent.ToString("n2") + "°F";
+                lblTemperature.Text = results.Main.Temperature.FahrenheitCurrent.ToString("n1") + "°F";
                 
                 // Air pressure in inches of mercury
-                lblPressure.Text = (results.Main.PressureInchesOfMercury.ToString("n2") + " in");
+                lblPressure.Text = (results.Main.PressureInchesOfMercury.ToString("n1") + " in");
                 
                 // Display weather description in Title Case
                 lblDescription.Text = results.Weathers[0].DescriptionTitleCase.ToString();

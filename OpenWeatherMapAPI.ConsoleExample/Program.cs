@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace OpenWeatherMapAPIConsoleExample
 {
@@ -7,7 +7,7 @@ namespace OpenWeatherMapAPIConsoleExample
         static void Main(string[] args)
         {
             // Create an http client to GET the current weather data from OpenWeatherMapAPI
-            var client = new OpenWeatherMapAPI.API("Your API Key");
+            var client = new OpenWeatherMapAPI.API("Your API Code Here");
             
             Console.WriteLine("OpenWeatherMapAPI Console Example Application\n");
 
@@ -22,10 +22,9 @@ namespace OpenWeatherMapAPIConsoleExample
 
             // Current weather is displayed as properties of results query object
             Console.WriteLine($"\nCurrent weather in {city}");
-            Console.WriteLine($"Temperature: {results.Main.Temperature.FahrenheitCurrent.ToString("n2")} °F");
+            Console.WriteLine($"Temperature: {results.Main.Temperature.FahrenheitCurrent.ToString("n1")}°F");
             Console.WriteLine($"Description: {results.Weathers[0].DescriptionTitleCase}");
-            Console.WriteLine($"Wind: {results.Wind.SpeedMilesPerHour.ToString("n2")} mph");
-            Console.WriteLine($"Direction: {results.Wind.DirectionLong}");
+            Console.WriteLine($"Wind: {results.Wind.SpeedMilesPerHour.ToString("n1")}mph { results.Wind.DirectionLong}");
 
             Console.ReadLine();
         }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace OpenWeatherMapAPI
 {
@@ -23,23 +23,23 @@ namespace OpenWeatherMapAPI
 			KelvinMinimum = min;
 			KelvinFeelsLike = feel;
 
-			CelsiusCurrent = ConvertToCelsius(KelvinCurrent);
-			CelsiusMaximum = ConvertToCelsius(KelvinMaximum);
-			CelsiusMinimum = ConvertToCelsius(KelvinMinimum);
-			CelsiusFeelsLike = ConvertToCelsius(KelvinFeelsLike);
+			CelsiusCurrent = convertToCelsius(KelvinCurrent);
+			CelsiusMaximum = convertToCelsius(KelvinMaximum);
+			CelsiusMinimum = convertToCelsius(KelvinMinimum);
+			CelsiusFeelsLike = convertToCelsius(KelvinFeelsLike);
 
-			FahrenheitCurrent = ConvertToFahrenheit(KelvinCurrent);
-			FahrenheitMaximum = ConvertToFahrenheit(KelvinMaximum);
-			FahrenheitMinimum = ConvertToFahrenheit(KelvinMinimum);
-			FahrenheitFeelsLike = ConvertToFahrenheit(KelvinFeelsLike);
+			FahrenheitCurrent = convertToFahrenheit(CelsiusCurrent);
+			FahrenheitMaximum = convertToFahrenheit(CelsiusMaximum);
+			FahrenheitMinimum = convertToFahrenheit(CelsiusMinimum);
+			FahrenheitFeelsLike = convertToFahrenheit(CelsiusFeelsLike);
 		}
 
-		private static double ConvertToFahrenheit(double kelvin)
+		private static double convertToFahrenheit(double celsius)
 		{
-			return Math.Round(((kelvin - 273.15) * 1.8) + 32) ;
+			return Math.Round(((9.0 / 5.0) * celsius) + 32, 3);
 		}
 
-		private static double ConvertToCelsius(double kelvin)
+		private static double convertToCelsius(double kelvin)
 		{
 			return Math.Round(kelvin - 273.15, 3);
 		}

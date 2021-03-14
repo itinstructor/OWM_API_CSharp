@@ -74,7 +74,7 @@ There are two methods of obtaining the OpenWeatherMapAPI.dll.
    - Generally, the path is something like: `/OpenWeatherMap-API-CSharp/OpenWeatherAPI.dll`
 #### Hard Way - Build Your Own OpenWeatherMap.dll
 1. Clone this code with the GitHub desktop
-2. Open the code in Visual Studio
+2. Open the project in Visual Studio
 3. Build the project
 4. In the project that's using this code, reference or copy the built DLL to your project from the previous step:
    - Project menu -> Add Reference -> Search for the created DLL(s) file.
@@ -82,7 +82,9 @@ There are two methods of obtaining the OpenWeatherMapAPI.dll.
 
 ### Example Console Usage
 ```csharp
-
+var client = new OpenWeatherMapAPI.API("Your Personal OpenWeatherMap API Key");
+var results = client.Query(city,"q");
+Console.WriteLine($"\n\nThe temperature in {city} is {results.Main.Temperature.FahrenheitCurrent}°F. \nThere is a {results.Wind.SpeedMilesPerHour.ToString("n2")} mph wind from the {results.Wind.DirectionStringShort}");
 ```
 
 ### Sample Project
@@ -97,7 +99,6 @@ This repository contains two example projects.
 
 ### Purpose
 I am an Information Technology Instructor at Western Nebraska Community College. I teach Information Technology Technical Support, CyberSecurity and Computer Science.
-
 This library was forked and modified for a Visual C# introductory programming class as a tutorial. Students are given the opportunity to learn how to consume a public API without the underlying complexity of parsing json or xml. It reinforces OOP concepts of objects and properties, while being a fun and interesting project.
 
 ### Changes

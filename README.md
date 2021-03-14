@@ -1,11 +1,13 @@
 # OpenWeatherMap-API - C# Class Library
 
 ### Overview
-- This library retrieves the OpenWeatherMap API returns in JSON, and converts them to C# objects with properties for easy interaction in C# projects. Built in .NET Standard 2.0
+- This library retrieves the OpenWeatherMap API returns in JSON.
+- This library converts the incoming JSON to C# objects with properties for easy interaction in C# projects. 
 - It supports (most/all) of the returned data the API returns in JSON.
-- There are extra conversions not present in the API.
+- There are extra conversions not in the API.
 - The JSON API returned properties are sometimes present, and sometimes not.
 - Use exception handling in an application. Things go wrong.
+- Built in .NET Standard 2.0
 
 ### Returned Data
 - Clouds
@@ -20,12 +22,12 @@
   * CelsiusCurrent - Returns converted Kelvin values of current temperature in Centigrade (double)
   * FahrenheitCurrent - Returns converted Kelvin values of current temperature in Fahrenheit (double)
   * KelvinCurrent - Returns raw OpenWeatherMap API values for temperature in Kelvin (double)
-  * CelsiusMinimum - Returns converted Kelvin values of minimum temperature observed at the moment in Centigrade within large megalopolises and urban areas (double)
-  * FahrenheitMinimum - Returns converted Kelvin values of minimum temperature observed at the moment in Fahrenheit within large megalopolises and urban areas (double)
-  * KelvinMinimum - Returns raw OpenWeatherMap API values for minimum temperature observed at the moment in Kelvin within large megalopolises and urban areas (double)
-  * CelsiusMaximum - Returns converted Kelvin values of maximum temperature observed at the moment in Centigrade within large megalopolises and urban areas (double)
-  * FahrenheitMaximum - Returns converted Kelvin values of maximum temperature observed at the moment in Fahrenheit within large megalopolises and urban areas (double)
-  * KelvinMaximum - Returns raw OpenWeatherMap API feels_like values for maximum temperatures observed at the moment in Kelvin within large megalopolises and urban areas (double)
+  * CelsiusMinimum - Returns converted Kelvin values of minimum temperature observed now in Centigrade within large megalopolises and urban areas (double)
+  * FahrenheitMinimum - Returns converted Kelvin values of minimum temperature observed now in Fahrenheit within large megalopolises and urban areas (double)
+  * KelvinMinimum - Returns raw OpenWeatherMap API values for minimum temperature observed now in Kelvin within large megalopolises and urban areas (double)
+  * CelsiusMaximum - Returns converted Kelvin values of maximum temperature observed now in Centigrade within large megalopolises and urban areas (double)
+  * FahrenheitMaximum - Returns converted Kelvin values of maximum temperature observed now in Fahrenheit within large megalopolises and urban areas (double)
+  * KelvinMaximum - Returns raw OpenWeatherMap API feels_like values for maximum temperatures now in Kelvin within large megalopolises and urban areas (double)
   * CelsiusFeelsLike – Returns converted Kelvin values of human perception of weather in Celsius (double)
   * FahrenheitFeelsLike - Returns converted Kelvin values of human perception of weather in Fahrenheit (double)
   * KelvinFeelsLike – Returns raw OpenWeatherMap API values of human perception of weather in Kelvin (double)
@@ -53,8 +55,8 @@
 - Weather
   * ID - System related parameter, avoid usage
   * Main - Returns raw OpenWeatherMap API short weather description (IE rain, snow, etc.) (string)
-  * Description - Returns raw OpenWeatherMap API detailed weather description (heavy intensity rain, etc) (string)
-  * DescriptionTitleCase - Returns cpmverted Description in Title Case (Heavy Intensity Rain, etc) (string)
+  * Description - Returns raw OpenWeatherMap API detailed weather description (heavy intensity rain, etc.) (string)
+  * DescriptionTitleCase - Returns cpmverted Description in Title Case (Heavy Intensity Rain, etc.) (string)
   * Icon - Returns raw OpenWeatherMap API Weather icon ID (string)
 - Wind
   * SpeedMetersPerSecond - Returns raw OpenWeatherMap API wind speed in meters per second (double)
@@ -94,7 +96,7 @@ This repository contains two example projects.
 
 ### Credits and Libraries Utilized
 - Newtonsoft.Json - JSON parsing class
-- GeoTimeZone - Provides an IANA time zone idnetifier from latitude and longitude coordinates
+- GeoTimeZone - Provides an IANA time zone identifier from latitude and longitude coordinates
 - TimeZoneConverter - Lightweight library to convert quickly between IANA, Windows, and Rails time zone names
 
 ### Purpose

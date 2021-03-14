@@ -3,8 +3,9 @@
 ### Overview
 - This library retrieves the OpenWeatherMap API returns in JSON, and converts them to C# objects with properties for easy interaction in C# projects. Built in .NET Standard 2.0
 - It supports (most/all) of the returned data the API returns in JSON.
+- There are extra conversions not present in the API.
 - The JSON API returned properties are sometimes present, and sometimes not.
-- Check properties for null vals before assigning. Don't assume they exist or are good values. Things go wrong.
+- Use exception handling in an application. Things go wrong.
 
 ### Returned Data
 - Clouds
@@ -66,12 +67,12 @@
 
 ### Installing
 There are two methods of obtaining the OpenWeatherMapAPI.dll.
-- Easy Way
+#### Easy Way
 1. Download the OpenWeatherMap.dll file. Copy it to your Visual C# project.
 2. In your project that's using this code, reference the built DLL from the previous step:
    - Project dropdown -> Add Reference -> Search for the created DLL file.
    - Generally, the path is something like: `/OpenWeatherMap-API-CSharp/OpenWeatherAPI.dll`
-- Hard Way - Build Your Own OpenWeatherMap.dll
+#### Hard Way - Build Your Own OpenWeatherMap.dll
 1. Clone this code with the GitHub desktop
 2. Open the code in Visual Studio
 3. Build the project
@@ -81,9 +82,7 @@ There are two methods of obtaining the OpenWeatherMapAPI.dll.
 
 ### Example Console Usage
 ```csharp
-var client = new OpenWeatherMapAPI.API("Your Personal OpenWeatherMap API Key");
-var results = client.Query(city,"q");
-Console.WriteLine($"\n\nThe temperature in {city} is {results.Main.Temperature.FahrenheitCurrent}°F. \nThere is a {results.Wind.SpeedMilesPerHour.ToString("n2")} mph wind from the {results.Wind.DirectionStringShort}");
+
 ```
 
 ### Sample Project
@@ -98,6 +97,7 @@ This repository contains two example projects.
 
 ### Purpose
 I am an Information Technology Instructor at Western Nebraska Community College. I teach Information Technology Technical Support, CyberSecurity and Computer Science.
+
 This library was forked and modified for a Visual C# introductory programming class as a tutorial. Students are given the opportunity to learn how to consume a public API without the underlying complexity of parsing json or xml. It reinforces OOP concepts of objects and properties, while being a fun and interesting project.
 
 ### Changes

@@ -56,7 +56,7 @@
   * ID - System related parameter, avoid usage
   * Main - Returns raw OpenWeatherMap API short weather description (IE rain, snow, etc.) (string)
   * Description - Returns raw OpenWeatherMap API detailed weather description (heavy intensity rain, etc.) (string)
-  * DescriptionTitleCase - Returns cpmverted Description in Title Case (Heavy Intensity Rain, etc.) (string)
+  * DescriptionTitleCase - Returns converted Description in Title Case (Heavy Intensity Rain, etc.) (string)
   * Icon - Returns raw OpenWeatherMap API Weather icon ID (string)
 - Wind
   * SpeedMetersPerSecond - Returns raw OpenWeatherMap API wind speed in meters per second (double)

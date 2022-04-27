@@ -35,6 +35,7 @@
   * GroundLevel - Returns raw OpenWeatherMap API values for atmospheric pressure on ground level, hPa (double)
   * Pressure – Returns raw OpenWeatherMap API values for atmospheric pressure, hPa (double)
   * PressureInchesOfMercury – Returns converted atmospheric pressure values from Pressure, inHg (double)
+  * Humidity - Returns percent humidity (double)
 - .Name - Returns raw OpenWeatherMap API City Name (string)
 - Rain
   * 3h - Returns raw OpenWeatherMap API rain related data for the last 3 hours at query location (if available) (double)

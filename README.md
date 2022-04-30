@@ -17,7 +17,7 @@
   * Latitude - Returns raw OpenWeatherMap API query location latitude (double)
   * LocationLocalDateTime - Returns query location Date and Time from longitude and latitude (DateTime)
   * TimeZoneInfoIANA - Returns IANA Time Zone Information from longitude and latitude (America/Denver) (string)
-- .ID - Returns raw OpenWeatherMap API unique city identification (int)
+  * ID - Returns raw OpenWeatherMap API unique city identification (int)
 ### Main
   * CelsiusCurrent - Returns converted Kelvin values of current temperature in Centigrade (double)
   * FahrenheitCurrent - Returns converted Kelvin values of current temperature in Fahrenheit (double)
@@ -36,9 +36,9 @@
   * Pressure – Returns raw OpenWeatherMap API values for atmospheric pressure, hPa (double)
   * PressureInchesOfMercury – Returns converted atmospheric pressure values from Pressure, inHg (double)
   * Humidity - Returns percent humidity (double)
-- .Name - Returns raw OpenWeatherMap API City Name (string)
-- Rain
-  * 3h - Returns raw OpenWeatherMap API rain related data for the last 3 hours at query location (if available) (double)
+  * Name - Returns raw OpenWeatherMap API City Name (string)
+  * Rain
+    * 3h - Returns raw OpenWeatherMap API rain related data for the last 3 hours at query location (if available) (double)
 ### Snow
   * 3h - Returns raw OpenWeatherMap API snow related data for the last 3 hours at query location (if available) (double)
 ### Sys
@@ -48,10 +48,10 @@
   * Country - Returns raw OpenWeatherMap API Country code of given query location  (string)
   * Sunrise - Returns DateTime for sunrise converted from OpenWeatherMap API returned unix time (DateTime)
   * Sunset - Returns DateTime for sunset converted from OpenWeatherMap API returned unix time (DateTime)
-- .TimeZone - Returns raw OpenWeatherMap API timezone shift in seconds from UTC (int)
-- .Visibility - Returns raw OpenWeatherMap API visibility in kilometers (double)
-- .VisibilityKm - Returns converted visibility in kilometers (double)
-- .VisibilityMiles - Returns converted visibility in miles (double)
+  * TimeZone - Returns raw OpenWeatherMap API timezone shift in seconds from UTC (int)
+  * Visibility - Returns raw OpenWeatherMap API visibility in kilometers (double)
+  * VisibilityKm - Returns converted visibility in kilometers (double)
+  * VisibilityMiles - Returns converted visibility in miles (double)
 ### Weather
 
   NOTE: The Weather section returns as a list. Use this syntax to retrieve the values: Weathers[0].parameter

@@ -1,6 +1,6 @@
 # OpenWeatherMap-API - C# Class Library
 
-### Overview
+## Overview
 - This library retrieves the OpenWeatherMap API returns in JSON.
 - This library converts the incoming JSON to C# objects with properties for easy interaction in C# projects. 
 - It supports (most/all) of the returned data the API returns in JSON.
@@ -9,16 +9,16 @@
 - Use exception handling in an application. Things go wrong.
 - Built in .NET Standard 2.0
 
-### Returned Data
-- Clouds
+## Returned Data From OpenWeatherMap API
+### Clouds
   * All - Returns raw OpenWeatherMap API percentage of cloud cover (double)
-- Coord
+### Coord
   * Longitude - Returns raw OpenWeatherMap API query location longitude (double)
   * Latitude - Returns raw OpenWeatherMap API query location latitude (double)
   * LocationLocalDateTime - Returns query location Date and Time from longitude and latitude (DateTime)
   * TimeZoneInfoIANA - Returns IANA Time Zone Information from longitude and latitude (America/Denver) (string)
 - .ID - Returns raw OpenWeatherMap API unique city identification (int)
-- Main
+### Main
   * CelsiusCurrent - Returns converted Kelvin values of current temperature in Centigrade (double)
   * FahrenheitCurrent - Returns converted Kelvin values of current temperature in Fahrenheit (double)
   * KelvinCurrent - Returns raw OpenWeatherMap API values for temperature in Kelvin (double)
@@ -39,9 +39,9 @@
 - .Name - Returns raw OpenWeatherMap API City Name (string)
 - Rain
   * 3h - Returns raw OpenWeatherMap API rain related data for the last 3 hours at query location (if available) (double)
-- Snow
+### Snow
   * 3h - Returns raw OpenWeatherMap API snow related data for the last 3 hours at query location (if available) (double)
-- Sys
+### Sys
   * Type - System related parameter, do not use
   * ID - Returns raw OpenWeatherMap API unique city identification (int)
   * Message - System related parameter, avoid usage
@@ -52,8 +52,7 @@
 - .Visibility - Returns raw OpenWeatherMap API visibility in kilometers (double)
 - .VisibilityKm - Returns converted visibility in kilometers (double)
 - .VisibilityMiles - Returns converted visibility in miles (double)
-## Weather
-
+### Weather
 
   NOTE: The Weather section returns as a list. Use this syntax to retrieve the values: Weathers[0].parameter
   * ID - System related parameter, avoid usage
@@ -73,7 +72,7 @@
     ```
     pctWeatherIcon.ImageLocation = iconUrl + results.Weathers[0].Icon + "@2x.png";
     ```
-- Wind
+### Wind
   * SpeedMetersPerSecond - Returns raw OpenWeatherMap API wind speed in meters per second (double)
   * SpeedFeetPerSecond - Returns wind speed in converted values in feet per second (double)
   * SpeedMilesPerHour - Returns wind speed in converted values in miles per hour (double)
@@ -82,14 +81,14 @@
   * Degree - Returns raw OpenWeatherMap API 360-oriented degree (double)
   * Gust - Returns raw OpenWeatherMap API speed of wind gusts in meters per second (double)
 
-### Installing
+## Installing OpenWeatherMapAPI.dll
 There are two methods of obtaining the OpenWeatherMapAPI.dll.
-#### Easy Way
+### Easy Way
 1. Download the OpenWeatherMap.dll file. Copy it to your Visual C# project.
 2. In your project that's using this code, reference the built DLL from the previous step:
    - Project dropdown -> Add Reference -> Search for the created DLL file.
    - Generally, the path is something like: `/OpenWeatherMap-API-CSharp/OpenWeatherAPI.dll`
-#### Hard Way - Build Your Own OpenWeatherMap.dll
+### Hard Way - Build Your Own OpenWeatherMap.dll
 1. Clone this code with the GitHub desktop
 2. Open the project in Visual Studio
 3. Build the project
@@ -97,24 +96,24 @@ There are two methods of obtaining the OpenWeatherMapAPI.dll.
    - Project menu -> Add Reference -> Search for the created DLL(s) file.
    - Generally, the path is something like: `/OpenWeatherMap-API-CSharp/bin/Debug/OpenWeatherMapAPI.dll`
 
-### Example Console Usage
+## Example Console Usage
 ```csharp
 var client = new OpenWeatherMapAPI.API("Your Personal OpenWeatherMap API Key");
 var results = client.Query(city,"q");
 Console.WriteLine($"\n\nThe temperature in {city} is {results.Main.Temperature.FahrenheitCurrent}°F. \nThere is a {results.Wind.SpeedMilesPerHour.ToString("n2")} mph wind from the {results.Wind.DirectionStringShort}");
 ```
 
-### Sample Project
+## Sample Project
 This repository contains two example projects.
 - Console Example
 - GUI Example
 
-### Credits and Libraries Utilized
+## Credits and Libraries Utilized
 - Newtonsoft.Json - JSON parsing class
 - GeoTimeZone - Provides an IANA time zone identifier from latitude and longitude coordinates
 - TimeZoneConverter - Lightweight library to convert quickly between IANA, Windows, and Rails time zone names
 
-### Purpose
+## Purpose
 I am an Information Technology Instructor at Western Nebraska Community College. I teach Information Technology Technical Support, CyberSecurity and Computer Science.
 This library was forked and modified for a Visual C# introductory programming class as a tutorial. Students are given the opportunity to learn how to consume a public API without the underlying complexity of parsing json or xml. It reinforces OOP concepts of objects and properties, while being a fun and interesting project.
 

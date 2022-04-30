@@ -60,15 +60,18 @@ NOTE: The Weather section returns as a list. Use this syntax to retrieve the val
   * DescriptionTitleCase - Returns converted Description in Title Case (Heavy Intensity Rain, etc.) (string)
   * Icon - Returns raw OpenWeatherMap API Weather icon ID (string)
   
-  Base url to build the query string for the weather icon
-  '''  
+    Base url to build the query string for the weather icon
+
+    ```
     private const string iconUrl = "http://openweathermap.org/img/wn/";
-  '''
+
+    ```
   
-  Display the icon
-  '''
-  pctWeatherIcon.ImageLocation = iconUrl + results.Weathers[0].Icon + "@2x.png";
-  '''
+     Display the icon
+
+    ```
+    pctWeatherIcon.ImageLocation = iconUrl + results.Weathers[0].Icon + "@2x.png";
+    ```
 - Wind
   * SpeedMetersPerSecond - Returns raw OpenWeatherMap API wind speed in meters per second (double)
   * SpeedFeetPerSecond - Returns wind speed in converted values in feet per second (double)

@@ -55,7 +55,7 @@
 ## Weather
 
 
-    NOTE: The Weather section returns as a list. Use this syntax to retrieve the values: Weathers[0].parameter
+  NOTE: The Weather section returns as a list. Use this syntax to retrieve the values: Weathers[0].parameter
   * ID - System related parameter, avoid usage
   * Main - Returns raw OpenWeatherMap API short weather description (IE rain, snow, etc.) (string)
   * Description - Returns raw OpenWeatherMap API detailed weather description (heavy intensity rain, etc.) (string)

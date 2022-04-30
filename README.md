@@ -64,7 +64,6 @@ NOTE: The Weather section returns as a list. Use this syntax to retrieve the val
 
     ```
     private const string iconUrl = "http://openweathermap.org/img/wn/";
-
     ```
   
      Display the icon
